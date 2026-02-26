@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras secuenciales</title>
+    <link rel="shortcut icon" href="Imagenes/imagen4.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <h1>Estructuras secuenciales.</h1>
+    <p>Las <code>estructuras secuenciales</code> son aquellas en las que una acción (<i>instrucción</i>) sigue a otra en una secuencia. En una <code>estructuras secuencial</code>, una acción no se realiza hasta que se haya completado la anterior. En general, las tareas se suceden de tal modo que la salida de una es la entrada de la siguiente, y así sucesivamente hasta el final del <b>proceso</b>.</p>
+
+    <p>A continuación, se muestra el diagrama de flujo y su sintaxis en <b>C</b> de una <code>estructura secuencial</code>:</p>
+
+    <div class="center">
+    <img src="Imagenes/imagen1.png" alt="">
+    </div>
+    
+    <i class="izq">Diagrama de flujo de una estructura secuencial.</i><i class="der">Sintaxis en <b>C</b> en una estructura secuencial.</i><br><br>
+
+    <p>Para comprender como se realiza la aplicación de esta estructura para resolver problemas, se muestra a continuación un ejemplo:</p>
+
+    <p><b>Ejemplo:</b> Se desea realizar un algoritmo que permita calcular el área de un rectángulo a partir de sus lados <code>a</code> y <code>b</code>. Los valores de los lados del rectángulo se deben ingresar por teclado, y el resultado se debe imprimir en pantalla. Realizar el diagrama de flujo y programa en <code>C</code> del algoritmo.</p>
+
+    <p><b>Solución</b>: A continuación, se muestra un esquema donde se ilustran los datos de entrada, el procesamiento de los datos, y los datos de salida del algoritmo:</p>
+
+    <div class="center">
+    <img src="Imagenes/imagen2.png" alt="">
+    </div>
+    <br><br>
+    <p>El algoritmo deberá, en primera instancia, declarar todas las variables que se van a utilizar (<code>a</code>, <code>b</code> y <code>área</code>). Luego, deberá leer los datos de entrada, realizar los cálculos necesarios, y escribir el resultado. El drigrama de flujo del algoritmo es el siguiente:</p>
+    <div class="center">
+    <img src="Imagenes/imagen3.png" alt="">
+    </div>
+    <br><br>
+
+    <h3>Diagrama de flujo del algoritmo.</h3>
+
+    Una vez realizado el diagrama de flujo del algoritmo, se deberá expresar en un lenguaje de programación. El programa pedido por la consigna es el <code>C</code>.
+
+
+    <pre><code class="language-cpp">
+#include &lt;stdio.h>             /*Añade la librería "std input-output" que contiene operaciones de entrada/salida tales como "scanf" y "printf"*/
+int main()            /*"main" es la función principal, donde está alojado el programa principal, cuya entrada es nula ("void") y su salida es un enetero "int".*/
+{
+    float a=0, b=0, area=0; /*Declara las variables en coma flotante "a", "b" y "area", y les asigna el valor de "0"*/
+    scanf("%f",&a);                 /*Ingrese un número por teclado y lo lmacena en la variable "a".*/
+    scanf("%f",&b);                 /*Ingrese un número por teclado y lo almacena en la variable "b".*/
+    area=a*b;               /*Realiza el cálculo "a * b" y el resultado lo almacena en la variable "area"*/
+    printf("%f",area);             /*Imprime en pantalla el valor almacena la variable "area".*/
+    return 0;               /*Devuelve un "0" como resultado de la función principal "main". Esto indica que el programa se ejecuto correctamente*/
+}
+    </code></pre>
+
+   
+    <h3>Programa en <code>C</code> del algoritmo.</h3>
+
+    <p>Todo el texto en gris entre los símbolos <code class="comentario">/*</code> y <code class="comentario">*/</code> son comentarios. No son parte del programa, y hacen una descripción de lo que realiza cada instrucción. Son muy  útiles para no olvidar la estructura lógica del algoritmo.</p>
+
+    <p>Es preciso tener en cuenta la sintaxis del programa anterior, tales como los <code>;</code> al final de cada sentencia, las llaves <code>{</code> y <code>}</code> que indican el principio y fin del programa principal, los paréntesis <code>(</code> <code>)</code>y que indican el principio y fin de los argumentos en las funciones, y las comas <code>,</code> que separan los argumentos, entre otras reglas.</p>
+    
+    <p>Es muy importante respectar todass estas reglas de sintaxis del lenguaje <code>C</code>, sino el programa no se compilará y no se podrá ejecutar.</p>
+    <br>
+    <hr>
+    <br>
+
+    <h4>Ejercicios</h4>
+
+    <ol>
+        <li>Diseñar un algoritmo que calcule el perímetro y el área de un círculo a partir del valor de su radio. El valor del radio se debe ingresar por teclado, y los valores del perímetro y el área calculados se deben imprimir en pantalla. Dibujar el diagrama de flujo y escribir el programa en <code>C</code> del algoritmo. <br> <em><b>Ayuda:</b> <br>Recordar que el perímetro <code>P</code> y el área <code>A</code> de un círculo de radio <code>R</code> se calculan:</em> <br><br><div class="ayuda1">P = 2 * 𝜋 * R   y  A = 𝜋 * R²</div><br><br>
+  
+        <fieldset>
+            <legend>Ejercicio 1</legend>
+            <iframe width="914" height="514" src="https://www.youtube.com/embed/6urQuJhUsNg" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </fieldset><br></li>
+        <hr>
+
+        <li> Diseñar un algoritmo que permita calcular la resistencia equivalente de dos resistencias en paralelo <code>R1</code> y <code>R2</code>. Los valores de las resistencias se deben ingresar por teclado, y el resultado de la resistencia equivalente se debe imprimir en pantalla. Dibujar el diagrama de flujo y escribir el programa en <code>C</code> del algoritmo. <br><p><em><b>Ayuda:</b> <br> Recordar que la resistencia equivalente de dos resistencias en paralelo se calcula mediante la expresión:</em></p><br><div class="ayuda1">Req =   (R1 * R2) / (R1+R2)</div><br><br>
+        
+        <fieldset>
+            <legend>Ejercicio 2</legend>
+            <iframe width="914" height="514" src="https://www.youtube.com/embed/YeaG6_zLqLU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </fieldset><br></li>
+        <hr>
+        
+        <li>Diseñar un algoritmo que calcule la suma de dos números enteros. Los números enteros se deben ingresar por teclado, y el resultado de la suma se debe imprimir en pantalla. Dibujar el diagrama de flujo y escribir el programa en <code>C</code> del algoritmo. <br>
+        <p><em><b>Ayuda:</b><br> Para declarar variables enteras se puede utilizar la siguiente instrucción:</em></p>
+        <pre><code class="language-cpp">
+int a; /* Declara la variable entera "a". */
+        </code></pre><br>
+        <fieldset>
+            <legend>Ejercicio 3</legend>
+            <iframe width="914" height="514" src="https://www.youtube.com/embed/WxeWjiok154" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </fieldset><br>
+        </li>
+        <hr>
+        <li>Diseñar un algoritmo que calcule la hipotenusa de un triagulo rectángulo a partir del valor de sus catetos. Los valores de los catetos se deben ingresar por teclado, y el valor de la hipotenusa calculada se debe imprimir en pantalla. Dibujar el diagrama de flujo y escribir el programa en <code>C</code> del algoritmo.
+        
+        <p><em><b>Ayuda 1:</b> Recordar que la hipotenusa <code>h</code> de un triángulo rectángulo con catetos <code>a</code> y <code>b</code> se calculan: 
+        </em></p>
+        <p style="color:gold">
+        $$
+        h = \sqrt{a^2 + b^2}
+        $$
+        </p>
+
+        <p><em><b>Ayuda 2:</b> <br> En <code>C</code> se pueden calcular potencias y raíces cuadradas con las funciones <code>pow()</code> y <code>sqrt()</code>, que se encuentra en la librería <code>math.h</code>. Esta librería se puede incluir agregando, al inicio del programa, la instrucción:</em></p>
+        <pre><code class="language-cpp">
+#include&lt;math.h&gt;
+        </code>
+        </pre>
+        <p><em><b>Ayuda 3:</b> <br> En el siguiente ejemplo se ilustra como se calculan cuadrados utilizando la instrucción <code>pow()</code>:</em></p>
+        <pre><code class="language-cpp">
+cuadrado = pow(numero, 2); /*Esta instrucción calcula el cuadrado del valor dentro de la variable `numero`, y el resultado lo almacena en la variable `cuadrado`. */
+        </code>
+        </pre>
+        <p><em><b>Ayuda 4:</b><br> En el siguiente ejemplo se ilustra como se calculan raíces cuadradas utilizando la instrucción <code>sqrt()</code>:</em></p>
+        <pre><code class="language-cpp">
+raiz = sqrt(numero); /*Esta instrucción calcula la raíz cuadrada del valor dentro de la variable "numero", y el resultado lo almacena en la variable "rai". */
+        </code></pre>
+
+        <fieldset>
+            <legend>Ejercicio 4</legend>
+            <iframe width="914" height="514" src="https://www.youtube.com/embed/rUkm3SnABzY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </fieldset><br>
+        </li>
+        <hr>
+        <li> Diseñar un algoritmo que pregunte el nombre al usuario, y luego devuelva un saludo junto con el nombre. El nombre del usuario se debe ingresar por teclado, y el saludo se debe imprimir en pantalla. Dibujar el diagrama de flujo y escribir el programa en <code>C</code> del algoritmo.
+        <p><em><b>Ayuda:</b><br> Para declarar una variable <code>char</code> que almacene una cadena de caraacteres, se puede utilizar la siguiente instrucción: </em></p>
+        <pre><code class="language-cpp">
+char nombre[20]; /*Esta instrucción declara la variable "nombre" con espacio para 20 caracteres */
+        </code>
+        </pre>
+        <fieldset>
+            <legend>Ejercicio 5</legend>
+            <iframe width="820" height="514" src="https://www.youtube.com/embed/kIGj3k9KxKc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </fieldset><br>
+        </li>
+    </ol>
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
