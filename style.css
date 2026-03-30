@@ -111,6 +111,9 @@ a:hover {
 .comentario{
     color:gray;
 }
+.prueba{
+    max-width: 800vw;
+}
 fieldset iframe {
   width: 100%;
   height: 500px;
